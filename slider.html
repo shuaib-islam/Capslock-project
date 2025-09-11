@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.1">
+    <title>Slider</title>
+</head>
+<body>
+      <section>
+        <img class="MySlideshow" src="download.png" alt="" style="height: 500px;" width="500px">
+        <img  class="MySlideshow"src="roblox-bans-and-threatens-to-sue-predator-hunter-youtuber-v0-ZlA5qTEbAye1Oy9wHnLqNi44DQCPkdMk2aqABWfmP50.webp" alt="" style="height: 500px;" width="500px">
+        <img class="MySlideshow" src="images.png" alt="" style="height: 500px;" width="500px">
+      </section>
+      <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel(){
+            var i;
+            var x = document.getElementsByClassName("MySlideshow");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "None";
+
+            }
+            myIndex++ ;
+            if (myIndex > x.length){
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000);
+
+        }
+      </script> 
+</body>
+</html>
